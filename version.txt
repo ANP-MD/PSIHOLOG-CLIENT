@@ -1,2 +1,2 @@
-1.0.1
-https://github.com/ANP-MD/PSIHOLOG-CLIENT/releases/download/1.0.1/PsychClientInstaller.exe
+1.0.2
+https://github.com/ANP-MD/PSIHOLOG-CLIENT/releases/download/1.0.2/PsychClientInstaller.exe
