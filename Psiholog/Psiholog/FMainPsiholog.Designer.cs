@@ -54,6 +54,7 @@
             this.columnHeaderPatronimic = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderDataNasterii = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderFisaNr = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.label6 = new System.Windows.Forms.Label();
             this.toolStrip1.SuspendLayout();
             this.groupBoxCautareCandidat.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -243,6 +244,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.groupBoxCautareCandidat);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 56);
@@ -308,6 +310,16 @@
             this.columnHeaderFisaNr.Text = "Fișa Nr";
             this.columnHeaderFisaNr.Width = 120;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(4, 441);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(57, 9);
+            this.label6.TabIndex = 94;
+            this.label6.Text = "Made by CATY";
+            // 
             // FMainPsiholog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -319,13 +331,14 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FMainPsiholog";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Psiholog 2.0 - Made by Caty ♥";
+            this.Text = "Psych-Client (CLOUD)";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FMainPsiholog_FormClosed);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.groupBoxCautareCandidat.ResumeLayout(false);
             this.groupBoxCautareCandidat.PerformLayout();
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -358,6 +371,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button buttonCautPenitenciar;
         private System.Windows.Forms.TextBox textBoxInstitutia;
+        private System.Windows.Forms.Label label6;
     }
 }
 

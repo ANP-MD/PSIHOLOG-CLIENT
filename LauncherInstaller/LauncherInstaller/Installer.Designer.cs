@@ -93,9 +93,9 @@
             this.nameLabel.ForeColor = System.Drawing.Color.Gainsboro;
             this.nameLabel.Location = new System.Drawing.Point(12, 11);
             this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(376, 20);
+            this.nameLabel.Size = new System.Drawing.Size(181, 20);
             this.nameLabel.TabIndex = 7;
-            this.nameLabel.Text = "Psiholog V2.1 (CLOUD BETA) - made by Caty ♥";
+            this.nameLabel.Text = "Psych-Client (CLOUD)";
             // 
             // exitButton
             // 

@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.IO;
 using System.Net;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
@@ -9,11 +12,15 @@ namespace Psiholog
     public partial class loginForm : Form
     {
         private static readonly string client_version = "1.0.0.RC-1";
-        public static readonly string versionUrl = "https://raw.githubusercontent.com/Akulav/AkulavMCLauncher/main/version.txt";
+        public static readonly string versionUrl = "https://raw.githubusercontent.com/ANP-MD/PSIHOLOG-CLIENT/main/version.txt";
+        public static readonly string update = @"C:\Psiholog\update.exe";
+        public static readonly string updateFlag = @"C:\Psiholog\update.txt";
+
 
         public loginForm()
         {
             InitializeComponent();
+            CheckUpdate(client_version);
         }
 
         private void loginButton_Click(object sender, EventArgs e)
@@ -31,14 +38,14 @@ namespace Psiholog
             }
         }
 
-        public void CheckUpdate(string version, Label packVersion)
+        private void CheckUpdate(string version)
         {
             try
             {
                 var metadata = new List<string>();
                 using (WebClient client = new WebClient())
                 {
-                    string updateData = client.DownloadString(Paths.versionUrl);
+                    string updateData = client.DownloadString(versionUrl);
                     metadata.AddRange(Regex.Split(updateData, "\r\n|\r|\n"));
                 }
 
@@ -46,17 +53,27 @@ namespace Psiholog
                 {
                     var client = new WebClient();
                     client.DownloadFileCompleted += Client_DownloadFileCompleted;
-                    client.DownloadFileAsync(new Uri(metadata[1]), Paths.update);
+                    client.DownloadFileAsync(new Uri(metadata[1]), update);
                 }
                 else
                 {
-                    File.Delete(Paths.update);
+                    File.Delete(update);
                 }
             }
             catch
             {
-                setControlText(nameLabel, "Server could not be reached.");
-                setControlText(packVersion, "");
+                errorLabel.Text = "Update Error";
             }
         }
+
+        private void Client_DownloadFileCompleted(object sender, AsyncCompletedEventArgs e)
+        {
+            File.WriteAllText(updateFlag, "INCOMING_UPDATE");
+            var p = new Process();
+            p.StartInfo.FileName = update;
+            p.Start();
+            Application.Exit();
+
+        }
+    }
 }

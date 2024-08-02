@@ -30,6 +30,7 @@ namespace AkulavLauncherInstaller
             if (File.Exists(updateFlag))
             {
                 installBtn.Text = "Update";
+                File.Delete(updateFlag);
             }
         }
 
