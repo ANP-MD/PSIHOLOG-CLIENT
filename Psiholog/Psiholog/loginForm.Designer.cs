@@ -83,7 +83,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "loginForm";
-            this.Text = "Psych-Client (CLOUD)";
+            this.Text = "Psych-Client (CLOUD) V1.0.2";
             this.ResumeLayout(false);
             this.PerformLayout();
 
