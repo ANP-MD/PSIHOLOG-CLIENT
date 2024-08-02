@@ -11,7 +11,7 @@ namespace Psiholog
 {
     public partial class loginForm : Form
     {
-        private static readonly string client_version = "1.0.0";
+        private static readonly string client_version = "1.0.1";
         public static readonly string versionUrl = "https://raw.githubusercontent.com/ANP-MD/PSIHOLOG-CLIENT/main/version.txt";
         public static readonly string update = @"C:\Psiholog\update.exe";
         public static readonly string updateFlag = @"C:\Psiholog\update.txt";
